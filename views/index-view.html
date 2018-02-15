@@ -1,0 +1,95 @@
+<div class="row">
+
+    <div class="col-sm-12 col-md-12 col-lg-12">
+
+        <div class="row textCenter">
+
+            <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 col-xl-3 padding-half">
+
+                <a href="" class="white-text" ng-click="mainctr.allDetails()">
+
+                    All
+
+                </a>
+
+            </div>
+
+            <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 col-xl-3 padding-half">
+
+                <a href="" class="white-text" ng-click="mainctr.onlyHouses()">
+
+                    <i class="fa fa-shield" aria-hidden="true"></i> House
+
+                </a>
+
+            </div>
+
+            <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 col-xl-3 padding-half">
+
+                <a href="" class="white-text" ng-click="mainctr.onlyCharacters()">
+
+                    <i class="fa fa-user" aria-hidden="true"></i> Character
+
+                </a>
+
+            </div>
+
+            <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 col-xl-3 padding-half">
+
+                <a href="" class="white-text" ng-click="mainctr.onlyBooks()">
+
+                    <i class="fa fa-book" aria-hidden="true"></i> Book
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="col-sm-12 col-md-12 col-lg-12">
+
+        <div class="row padding-1 textCenter">
+
+            <div class="col-sm-6 col-md-6 col-lg-6 padding-half">
+
+                <strong>Search By Name: </strong>
+
+                <input type="text" placeholder="Type String..." ng-model="name1.name">
+
+            </div>
+
+            <div class="col-sm-6 col-md-6 col-lg-6 padding-half">
+
+                <strong>Sort Data:</strong>
+
+                <select ng-model="name" ng-init="name='name'">
+
+                    <option value="name" selected="selected">Sort Alphabetically</option>
+
+                    <option value="-name">Sort Alphabetically Reverse</option>
+
+                </select>
+
+            </div>
+
+        </div>
+    
+    </div>
+
+</div>
+
+<div class="row">
+
+    <div class="col-sm-12 col-md-6 col-lg-6" ng-repeat="all in mainctr.allData | orderBy : name | filter:name1">
+
+        <got-Houses></got-Houses>
+
+        <got-Chars></got-Chars>
+
+        <got-Books></got-Books>
+
+    </div>
+
+</div>

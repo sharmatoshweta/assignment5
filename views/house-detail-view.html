@@ -1,0 +1,185 @@
+<div class="row">
+
+    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+
+        <div class="row">
+
+            <div class="col-sm-12 col-md-12 col-xl-12 col-lg-12">
+
+                <h2>
+
+                    <i class="fa fa-shield" aria-hidden="true"></i> {{houseview.housedata.name}}
+
+                </h2>
+
+                <hr>
+
+            </div>
+
+            <div class="col-sm-12 col-md-12 col-xl-12 col-lg-12" ng-if="houseview.housedata.region">
+
+                <h5>Region: </h5>
+
+                {{houseview.housedata.region}}
+
+                <hr>
+
+            </div>
+
+            <div class="col-sm-12 col-md-12 col-xl-12 col-lg-12" ng-if="houseview.housedata.coatOfArms">
+
+                <h5>Coat Of Arms: </h5> {{houseview.housedata.coatOfArms}}
+
+                <hr>
+
+            </div>
+
+            <div class="col-sm-12 col-md-12 col-xl-12 col-lg-12" ng-if="houseview.housedata.words">
+
+                <h5>Words: </h5>{{houseview.housedata.words}}
+
+                <hr>
+
+            </div>
+
+            <div class="col-sm-12 col-md-12 col-xl-12 col-lg-12" ng-if="houseview.housedata.titles[0]">
+
+                <h5>Titles: </h5>
+
+                <span ng-repeat="title in houseview.housedata.titles">
+
+                    {{title}},
+
+                </span>
+
+                <hr>
+
+            </div>
+
+            <div class="col-sm-12 col-md-12 col-xl-12 col-lg-12" ng-if="houseview.housedata.seats[0]">
+
+                <h5>Seats: </h5>
+
+                <span ng-repeat="seat in houseview.housedata.seats">
+
+                    {{seat}},
+
+                </span>
+
+                <hr>
+
+            </div>
+
+            <div class="col-sm-12 col-md-12 col-xl-12 col-lg-12" ng-if="houseview.housedata.currentLord">
+
+                <h5>Current Lord: </h5>
+
+                <a ng-href="#!/char/{{houseview.housedata.currentLord.split('/').pop()}}">{{houseview.housedata.currentLord}}</a>
+
+                <hr>
+
+            </div>
+
+            <div class="col-sm-12 col-md-12 col-xl-12 col-lg-12" ng-if="houseview.housedata.heir">
+
+                <h5>Heir: </h5>
+
+                <a ng-href="#!/char/{{houseview.housedata.heir.split('/').pop()}}">{{houseview.housedata.heir}}</a>
+
+                <hr>
+
+            </div>
+
+            <div class="col-sm-12 col-md-12 col-xl-12 col-lg-12" ng-if="houseview.housedata.overlord">
+
+                <h5>OverLord: </h5>
+
+                <a ng-href="#!/char/{{houseview.housedata.overlord.split('/').pop()}}">{{houseview.housedata.overlord}}</a>
+
+                <hr>
+
+            </div>
+
+            <div class="col-sm-12 col-md-12 col-xl-12 col-lg-12" ng-if="houseview.housedata.founded">
+
+                <h5>Founded: </h5>{{houseview.housedata.founded}}
+
+                <hr>
+
+            </div>
+
+            <div class="col-sm-12 col-md-12 col-xl-12 col-lg-12" ng-if="houseview.housedata.founder">
+
+                <h5>Founder: </h5>
+
+                <a ng-href="#!/char/{{houseview.housedata.founder.split('/').pop()}}">{{houseview.housedata.founder}}</a>
+
+                <hr>
+
+            </div>
+
+            <div class="col-sm-12 col-md-12 col-xl-12 col-lg-12" ng-if="houseview.housedata.diedOut">
+
+                <h5>DiedOut: </h5>{{houseview.housedata.diedOut}}
+
+                <hr>
+
+            </div>
+
+            <div class="col-sm-12 col-md-12 col-xl-12 col-lg-12" ng-if="houseview.housedata.ancestralWeapons[0]">
+
+                <h5>Ancestral Weapons: </h5>
+
+                <span ng-repeat="weapon in houseview.housedata.ancestralWeapons">
+
+                    {{weapon}},
+
+                </span>
+
+                <hr>
+
+            </div>
+
+            <div class="col-sm-12 col-md-12 col-xl-12 col-lg-12" ng-if="houseview.housedata.cadetBranches[0]">
+
+                <h5>Cadet Branches: </h5>
+
+                <span ng-repeat="cadet in houseview.housedata.cadetBranches">
+
+                    <a ng-href="#!/house/{{cadet.split('/').pop()}}">Branch {{$index+1}}</a>,
+
+                </span>
+
+                <hr>
+
+            </div>
+
+            <div class="col-sm-12 col-md-12 col-xl-12 col-lg-12" ng-if="houseview.housedata.swornMembers[0]">
+
+                <h5>Sworn Members: </h5>
+
+                <span ng-repeat="sworn in houseview.housedata.swornMembers">
+
+                    <a ng-href="#!/char/{{sworn.split('/').pop()}}">Sworn Member {{$index+1}}</a>,
+
+                </span>
+
+                <hr>
+
+            </div>
+
+
+
+            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+
+                <a ng-href="#!/">
+
+                    <button>Go Back</button>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
